@@ -1,0 +1,135 @@
+/* ==========================================================================
+   t11-cobalt.css — Dynamic Energy
+   Electric cobalt + White + Vivid orange. Bold, high-energy, Anton display.
+   ========================================================================== */
+
+/* --- Navigation ----------------------------------------------------------- */
+[data-template="cobalt"] .site-header,
+.t-cobalt .site-header {
+  background: var(--color-bg-accent);
+}
+[data-template="cobalt"] .site-header.is-sticky,
+.t-cobalt .site-header.is-sticky {
+  box-shadow: 0 4px 24px rgba(0,56,168,0.3);
+  border-bottom: none;
+}
+[data-template="cobalt"] .site-branding__name,
+.t-cobalt .site-branding__name {
+  font-family: var(--font-display);
+  font-size: var(--font-size-2xl);
+  font-weight: 400;
+  letter-spacing: var(--tracking-tight);
+  text-transform: uppercase;
+  color: #fff;
+}
+[data-template="cobalt"] .nav-menu li a,
+.t-cobalt .nav-menu li a {
+  font-family: var(--font-accent);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.8);
+}
+[data-template="cobalt"] .nav-menu li a:hover,
+.t-cobalt .nav-menu li a:hover { color: var(--color-accent-1); }
+[data-template="cobalt"] .nav-menu li a::after,
+.t-cobalt .nav-menu li a::after { background: var(--color-accent-1); }
+[data-template="cobalt"] .header__btn,
+.t-cobalt .header__btn {
+  background: var(--color-accent-1);
+  border-color: var(--color-accent-1);
+  color: #fff;
+  border-radius: 0;
+  font-family: var(--font-accent);
+  font-weight: 700;
+  letter-spacing: var(--tracking-widest);
+}
+
+/* --- Hero ----------------------------------------------------------------- */
+[data-template="cobalt"] .hero,
+.t-cobalt .hero { min-height: 100vh; }
+[data-template="cobalt"] .hero__bg,
+.t-cobalt .hero__bg {
+  background: linear-gradient(135deg, #001a5c 0%, var(--color-hero-bg) 60%, #0050d0 100%);
+}
+[data-template="cobalt"] .hero__overlay,
+.t-cobalt .hero__overlay {
+  background: linear-gradient(135deg, rgba(0,26,92,0.5) 0%, rgba(0,56,168,0.2) 100%);
+}
+[data-template="cobalt"] .hero__eyebrow,
+.t-cobalt .hero__eyebrow { color: var(--color-accent-1); }
+[data-template="cobalt"] .hero__heading,
+.t-cobalt .hero__heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: var(--tracking-tight);
+  text-transform: uppercase;
+  font-size: var(--font-size-display);
+  line-height: 0.95;
+}
+[data-template="cobalt"] .hero__heading em,
+.t-cobalt .hero__heading em {
+  font-style: normal;
+  color: var(--color-accent-1);
+}
+[data-template="cobalt"] .hero__cta .btn--primary,
+.t-cobalt .hero__cta .btn--primary {
+  background: var(--color-accent-1);
+  border-color: var(--color-accent-1);
+  border-radius: 0;
+  font-family: var(--font-accent);
+  font-weight: 700;
+}
+
+/* --- Practice Areas ------------------------------------------------------- */
+[data-template="cobalt"] .practice-areas,
+.t-cobalt .practice-areas { background: var(--color-bg-secondary); }
+[data-template="cobalt"] .practice-card,
+.t-cobalt .practice-card {
+  border-radius: 0;
+  border: none;
+  border-bottom: 3px solid var(--color-accent-2);
+}
+[data-template="cobalt"] .practice-card:hover,
+.t-cobalt .practice-card:hover {
+  border-bottom-color: var(--color-accent-1);
+  background: var(--color-bg-accent);
+}
+[data-template="cobalt"] .practice-card:hover .practice-card__title,
+.t-cobalt .practice-card:hover .practice-card__title { color: #fff; }
+[data-template="cobalt"] .practice-card:hover .practice-card__desc,
+.t-cobalt .practice-card:hover .practice-card__desc { color: rgba(255,255,255,0.7); }
+[data-template="cobalt"] .practice-card:hover .practice-card__link,
+.t-cobalt .practice-card:hover .practice-card__link { color: var(--color-accent-1); }
+[data-template="cobalt"] .practice-card__title,
+.t-cobalt .practice-card__title {
+  font-family: var(--font-accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+/* --- Stats ---------------------------------------------------------------- */
+[data-template="cobalt"] .stats,
+.t-cobalt .stats { background: var(--color-bg-accent); }
+[data-template="cobalt"] .stat-item__number,
+.t-cobalt .stat-item__number { color: var(--color-accent-1); font-family: var(--font-display); }
+
+/* --- Testimonials --------------------------------------------------------- */
+[data-template="cobalt"] .testimonials,
+.t-cobalt .testimonials { background: var(--color-bg-primary); }
+[data-template="cobalt"] .testimonial-card,
+.t-cobalt .testimonial-card {
+  border-radius: 0;
+  border: 2px solid var(--color-border);
+  background: #fff;
+}
+[data-template="cobalt"] .star-rating,
+.t-cobalt .star-rating { color: var(--color-accent-1); }
+
+/* --- Footer --------------------------------------------------------------- */
+[data-template="cobalt"] .site-footer,
+.t-cobalt .site-footer { background: var(--color-bg-accent); }
+[data-template="cobalt"] .footer__heading,
+.t-cobalt .footer__heading { color: var(--color-accent-1); }

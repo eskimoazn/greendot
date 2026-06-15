@@ -1,0 +1,153 @@
+/* ==========================================================================
+   t04-slate.css — Ultra-Minimal
+   Off-white + Charcoal + Terracotta accent. Extreme whitespace. Content-first.
+   ========================================================================== */
+
+/* --- Navigation ----------------------------------------------------------- */
+[data-template="slate"] .site-header,
+.t-slate .site-header {
+  background: transparent;
+  border-bottom: none;
+}
+[data-template="slate"] .site-header.is-sticky,
+.t-slate .site-header.is-sticky {
+  background: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: none;
+}
+[data-template="slate"] .site-branding__name,
+.t-slate .site-branding__name {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+[data-template="slate"] .nav-menu li a,
+.t-slate .nav-menu li a {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-text-secondary);
+}
+[data-template="slate"] .header__btn,
+.t-slate .header__btn { display: none; }
+
+/* --- Hero ----------------------------------------------------------------- */
+[data-template="slate"] .hero,
+.t-slate .hero {
+  min-height: 90vh;
+  background: var(--color-bg-primary);
+  align-items: flex-end;
+  padding-bottom: var(--space-24);
+}
+[data-template="slate"] .hero__bg,
+.t-slate .hero__bg {
+  background: var(--color-bg-primary);
+}
+[data-template="slate"] .hero__overlay,
+.t-slate .hero__overlay { background: transparent; }
+[data-template="slate"] .hero__inner,
+.t-slate .hero__inner {
+  max-width: 900px;
+  border-left: 2px solid var(--color-accent-1);
+  padding-left: var(--space-8);
+}
+[data-template="slate"] .hero__eyebrow,
+.t-slate .hero__eyebrow { color: var(--color-accent-1); }
+[data-template="slate"] .hero__heading,
+.t-slate .hero__heading {
+  font-family: var(--font-display);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-regular);
+}
+[data-template="slate"] .hero__sub,
+.t-slate .hero__sub {
+  color: var(--color-text-secondary);
+}
+[data-template="slate"] .hero__cta .btn--ghost,
+.t-slate .hero__cta .btn--ghost {
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+[data-template="slate"] .hero__scroll-indicator,
+.t-slate .hero__scroll-indicator { color: var(--color-text-muted); }
+
+/* --- Practice Areas ------------------------------------------------------- */
+[data-template="slate"] .practice-areas,
+.t-slate .practice-areas { background: var(--color-bg-primary); }
+[data-template="slate"] .practice-areas__grid,
+.t-slate .practice-areas__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+[data-template="slate"] .practice-card,
+.t-slate .practice-card {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+  display: grid;
+  grid-template-columns: 3rem 1fr auto;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-6) 0;
+}
+[data-template="slate"] .practice-card:hover,
+.t-slate .practice-card:hover {
+  transform: none;
+  box-shadow: none;
+  border-bottom-color: var(--color-accent-1);
+}
+[data-template="slate"] .practice-card__img,
+.t-slate .practice-card__img { display: none; }
+[data-template="slate"] .practice-card__icon,
+.t-slate .practice-card__icon { padding: 0; font-size: var(--font-size-xl); }
+[data-template="slate"] .practice-card__body,
+.t-slate .practice-card__body { padding: 0; }
+[data-template="slate"] .practice-card__title,
+.t-slate .practice-card__title {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-1);
+}
+[data-template="slate"] .practice-card__desc,
+.t-slate .practice-card__desc { margin-bottom: 0; font-size: var(--font-size-sm); }
+[data-template="slate"] .practice-card__link,
+.t-slate .practice-card__link {
+  white-space: nowrap;
+  font-size: var(--font-size-xs);
+}
+
+/* --- Stats ---------------------------------------------------------------- */
+[data-template="slate"] .stats,
+.t-slate .stats {
+  background: var(--color-bg-secondary);
+  padding-block: var(--space-12);
+}
+[data-template="slate"] .stat-item__number,
+.t-slate .stat-item__number { color: var(--color-accent-1); }
+[data-template="slate"] .stat-item__label,
+.t-slate .stat-item__label {
+  color: var(--color-text-secondary);
+}
+
+/* --- Testimonials --------------------------------------------------------- */
+[data-template="slate"] .testimonials,
+.t-slate .testimonials { background: var(--color-bg-primary); }
+[data-template="slate"] .testimonial-card,
+.t-slate .testimonial-card {
+  border-radius: 0;
+  border: none;
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-8) 0;
+  background: transparent;
+}
+
+/* --- Footer --------------------------------------------------------------- */
+[data-template="slate"] .site-footer,
+.t-slate .site-footer { background: var(--color-bg-accent); }

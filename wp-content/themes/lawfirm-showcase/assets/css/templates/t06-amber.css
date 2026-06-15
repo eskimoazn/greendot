@@ -1,0 +1,101 @@
+/* ==========================================================================
+   t06-amber.css — Approachable Warm
+   Sand + Amber + Chocolate. Friendly rounded shapes, inviting energy.
+   ========================================================================== */
+
+/* --- Navigation ----------------------------------------------------------- */
+[data-template="amber"] .site-header,
+.t-amber .site-header {
+  background: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
+}
+[data-template="amber"] .site-header.is-sticky,
+.t-amber .site-header.is-sticky {
+  box-shadow: var(--shadow-md);
+}
+[data-template="amber"] .site-branding__name,
+.t-amber .site-branding__name {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-style: italic;
+}
+[data-template="amber"] .nav-menu li a,
+.t-amber .nav-menu li a {
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-4);
+}
+[data-template="amber"] .nav-menu li a:hover,
+.t-amber .nav-menu li a:hover {
+  background: var(--color-bg-secondary);
+  color: var(--color-accent-1);
+}
+[data-template="amber"] .nav-menu li a::after,
+.t-amber .nav-menu li a::after { display: none; }
+[data-template="amber"] .header__btn,
+.t-amber .header__btn {
+  background: var(--color-accent-1);
+  border-color: var(--color-accent-1);
+  color: #fff;
+  border-radius: var(--radius-full);
+}
+
+/* --- Hero ----------------------------------------------------------------- */
+[data-template="amber"] .hero,
+.t-amber .hero { min-height: 85vh; }
+[data-template="amber"] .hero__bg,
+.t-amber .hero__bg {
+  background: linear-gradient(135deg, var(--color-hero-bg) 0%, #5a2e00 100%);
+}
+[data-template="amber"] .hero__overlay,
+.t-amber .hero__overlay {
+  background: linear-gradient(135deg, rgba(61,31,0,0.5) 0%, rgba(61,31,0,0.2) 100%);
+}
+[data-template="amber"] .hero__heading,
+.t-amber .hero__heading {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-style: italic;
+}
+[data-template="amber"] .hero__eyebrow,
+.t-amber .hero__eyebrow { color: var(--color-accent-3); }
+[data-template="amber"] .hero__inner,
+.t-amber .hero__inner { max-width: 700px; }
+
+/* --- Practice Areas ------------------------------------------------------- */
+[data-template="amber"] .practice-areas,
+.t-amber .practice-areas { background: var(--color-bg-secondary); }
+[data-template="amber"] .practice-card,
+.t-amber .practice-card {
+  border-radius: var(--radius-xl);
+  border: none;
+  border-top: 4px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+[data-template="amber"] .practice-card:hover,
+.t-amber .practice-card:hover {
+  border-top-color: var(--color-accent-1);
+  box-shadow: var(--shadow-lg);
+}
+
+/* --- Stats ---------------------------------------------------------------- */
+[data-template="amber"] .stats,
+.t-amber .stats {
+  background: var(--color-bg-accent);
+}
+[data-template="amber"] .stat-item__number,
+.t-amber .stat-item__number { color: var(--color-accent-1); }
+
+/* --- Testimonials --------------------------------------------------------- */
+[data-template="amber"] .testimonials,
+.t-amber .testimonials { background: var(--color-bg-primary); }
+[data-template="amber"] .testimonial-card,
+.t-amber .testimonial-card { border-radius: var(--radius-xl); }
+[data-template="amber"] .star-rating,
+.t-amber .star-rating { color: var(--color-accent-1); }
+
+/* --- Footer --------------------------------------------------------------- */
+[data-template="amber"] .site-footer,
+.t-amber .site-footer { background: var(--color-bg-accent); }

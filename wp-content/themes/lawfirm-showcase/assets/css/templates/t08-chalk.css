@@ -1,0 +1,108 @@
+/* ==========================================================================
+   t08-chalk.css — Soft Editorial
+   Chalk white + Soft black + Dusty sage. Magazine editorial aesthetic.
+   ========================================================================== */
+
+/* --- Navigation ----------------------------------------------------------- */
+[data-template="chalk"] .site-header,
+.t-chalk .site-header {
+  background: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
+}
+[data-template="chalk"] .site-branding__name,
+.t-chalk .site-branding__name {
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+[data-template="chalk"] .nav-menu li a,
+.t-chalk .nav-menu li a {
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  letter-spacing: var(--tracking-wide);
+}
+[data-template="chalk"] .nav-menu li a::after,
+.t-chalk .nav-menu li a::after { background: var(--color-accent-1); }
+[data-template="chalk"] .header__btn,
+.t-chalk .header__btn {
+  background: var(--color-accent-2);
+  border-color: var(--color-accent-2);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-full);
+  font-weight: 400;
+  letter-spacing: var(--tracking-wider);
+}
+
+/* --- Hero ----------------------------------------------------------------- */
+[data-template="chalk"] .hero,
+.t-chalk .hero {
+  min-height: 90vh;
+  background: var(--color-bg-primary);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+[data-template="chalk"] .hero__bg,
+.t-chalk .hero__bg { background: var(--color-bg-primary); }
+[data-template="chalk"] .hero__overlay,
+.t-chalk .hero__overlay { background: transparent; }
+[data-template="chalk"] .hero__inner,
+.t-chalk .hero__inner { max-width: 860px; margin-inline: auto; }
+[data-template="chalk"] .hero__eyebrow,
+.t-chalk .hero__eyebrow {
+  color: var(--color-accent-1);
+  font-family: var(--font-body);
+}
+[data-template="chalk"] .hero__heading,
+.t-chalk .hero__heading {
+  font-family: var(--font-display);
+  color: var(--color-text-primary);
+  font-weight: 400;
+  font-style: italic;
+  font-size: var(--font-size-display);
+}
+[data-template="chalk"] .hero__heading em,
+.t-chalk .hero__heading em {
+  display: inline-block;
+  font-style: normal;
+  border-bottom: 3px solid var(--color-accent-1);
+}
+[data-template="chalk"] .hero__sub,
+.t-chalk .hero__sub { color: var(--color-text-secondary); margin-inline: auto; }
+[data-template="chalk"] .hero__cta,
+.t-chalk .hero__cta { justify-content: center; }
+[data-template="chalk"] .hero__cta .btn--ghost,
+.t-chalk .hero__cta .btn--ghost {
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+[data-template="chalk"] .hero__scroll-indicator,
+.t-chalk .hero__scroll-indicator { color: var(--color-text-muted); }
+
+/* --- Practice Areas ------------------------------------------------------- */
+[data-template="chalk"] .practice-areas,
+.t-chalk .practice-areas { background: var(--color-bg-secondary); }
+[data-template="chalk"] .practice-card,
+.t-chalk .practice-card { border-radius: var(--radius-md); }
+
+/* --- Stats ---------------------------------------------------------------- */
+[data-template="chalk"] .stats,
+.t-chalk .stats { background: var(--color-accent-1); }
+[data-template="chalk"] .stat-item__number,
+.t-chalk .stat-item__number { color: var(--color-bg-primary); }
+[data-template="chalk"] .stat-item__label,
+.t-chalk .stat-item__label { color: rgba(246,244,240,0.75); }
+
+/* --- Testimonials --------------------------------------------------------- */
+[data-template="chalk"] .testimonials,
+.t-chalk .testimonials { background: var(--color-bg-primary); }
+[data-template="chalk"] .testimonial-card,
+.t-chalk .testimonial-card { border-radius: var(--radius-md); background: var(--color-bg-secondary); border: none; }
+
+/* --- Footer --------------------------------------------------------------- */
+[data-template="chalk"] .site-footer,
+.t-chalk .site-footer { background: var(--color-bg-accent); }

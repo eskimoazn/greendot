@@ -1,0 +1,208 @@
+/* ==========================================================================
+   t12-onyx.css — Stark Power
+   Pure black + White + Blood red single accent. Fearless, uncompromising.
+   ========================================================================== */
+
+/* --- Navigation ----------------------------------------------------------- */
+[data-template="onyx"] .site-header,
+.t-onyx .site-header {
+  background: #000;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+[data-template="onyx"] .site-header.is-sticky,
+.t-onyx .site-header.is-sticky {
+  border-bottom-color: var(--color-accent-1);
+  box-shadow: 0 0 40px rgba(204,0,0,0.15);
+}
+[data-template="onyx"] .site-branding__name,
+.t-onyx .site-branding__name {
+  font-family: var(--font-display);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: #fff;
+}
+[data-template="onyx"] .nav-menu li a,
+.t-onyx .nav-menu li a {
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+[data-template="onyx"] .nav-menu li a:hover,
+.t-onyx .nav-menu li a:hover { color: var(--color-accent-1); }
+[data-template="onyx"] .nav-menu li a::after,
+.t-onyx .nav-menu li a::after { background: var(--color-accent-1); }
+[data-template="onyx"] .header__btn,
+.t-onyx .header__btn {
+  background: var(--color-accent-1);
+  border-color: var(--color-accent-1);
+  color: #fff;
+  border-radius: 0;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+[data-template="onyx"] .header__btn:hover,
+.t-onyx .header__btn:hover {
+  background: var(--color-accent-2);
+  border-color: var(--color-accent-2);
+}
+
+/* --- Hero ----------------------------------------------------------------- */
+[data-template="onyx"] .hero,
+.t-onyx .hero {
+  min-height: 100vh;
+  background: #000;
+}
+[data-template="onyx"] .hero__bg,
+.t-onyx .hero__bg {
+  background:
+    radial-gradient(ellipse at 80% 50%, rgba(204,0,0,0.12) 0%, transparent 60%),
+    #000;
+}
+[data-template="onyx"] .hero__overlay,
+.t-onyx .hero__overlay { background: transparent; }
+[data-template="onyx"] .hero__eyebrow,
+.t-onyx .hero__eyebrow { color: var(--color-accent-1); }
+[data-template="onyx"] .hero__heading,
+.t-onyx .hero__heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: #fff;
+  font-size: var(--font-size-display);
+  letter-spacing: var(--tracking-tight);
+}
+[data-template="onyx"] .hero__heading em,
+.t-onyx .hero__heading em {
+  font-style: normal;
+  color: var(--color-accent-1);
+}
+[data-template="onyx"] .hero__heading::after,
+.t-onyx .hero__heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--color-accent-1);
+  margin-top: var(--space-6);
+}
+[data-template="onyx"] .hero__sub,
+.t-onyx .hero__sub { color: rgba(255,255,255,0.55); }
+[data-template="onyx"] .hero__cta .btn--primary,
+.t-onyx .hero__cta .btn--primary {
+  background: var(--color-accent-1);
+  border-color: var(--color-accent-1);
+  border-radius: 0;
+}
+[data-template="onyx"] .hero__cta .btn--ghost,
+.t-onyx .hero__cta .btn--ghost {
+  border-color: rgba(255,255,255,0.25);
+  border-radius: 0;
+}
+
+/* --- Practice Areas ------------------------------------------------------- */
+[data-template="onyx"] .practice-areas,
+.t-onyx .practice-areas { background: var(--color-bg-secondary); }
+[data-template="onyx"] .practice-card,
+.t-onyx .practice-card {
+  background: var(--color-bg-card);
+  border-radius: 0;
+  border: 1px solid var(--color-border);
+  border-left: 3px solid transparent;
+}
+[data-template="onyx"] .practice-card:hover,
+.t-onyx .practice-card:hover {
+  border-left-color: var(--color-accent-1);
+  transform: none;
+  box-shadow: none;
+}
+[data-template="onyx"] .practice-card__title,
+.t-onyx .practice-card__title { color: #fff; }
+[data-template="onyx"] .practice-card__desc,
+.t-onyx .practice-card__desc { color: rgba(255,255,255,0.5); }
+[data-template="onyx"] .practice-card__link,
+.t-onyx .practice-card__link { color: var(--color-accent-1); }
+
+/* --- Stats ---------------------------------------------------------------- */
+[data-template="onyx"] .stats,
+.t-onyx .stats {
+  background: #000;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+[data-template="onyx"] .stats__row,
+.t-onyx .stats__row {
+  position: relative;
+}
+[data-template="onyx"] .stat-item,
+.t-onyx .stat-item {
+  position: relative;
+}
+[data-template="onyx"] .stat-item + .stat-item::before,
+.t-onyx .stat-item + .stat-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 20%;
+  height: 60%;
+  width: 1px;
+  background: var(--color-accent-1);
+  opacity: 0.3;
+}
+[data-template="onyx"] .stat-item__number,
+.t-onyx .stat-item__number { color: #fff; }
+[data-template="onyx"] .stat-item__label,
+.t-onyx .stat-item__label { color: rgba(255,255,255,0.4); }
+
+/* --- Testimonials --------------------------------------------------------- */
+[data-template="onyx"] .testimonials,
+.t-onyx .testimonials { background: var(--color-bg-secondary); }
+[data-template="onyx"] .testimonial-card,
+.t-onyx .testimonial-card {
+  background: var(--color-bg-card);
+  border-radius: 0;
+  border: 1px solid var(--color-border);
+}
+[data-template="onyx"] .testimonial-card__mark,
+.t-onyx .testimonial-card__mark {
+  color: var(--color-accent-1);
+  opacity: 0.6;
+}
+[data-template="onyx"] .testimonial-card__quote,
+.t-onyx .testimonial-card__quote { color: rgba(255,255,255,0.7); }
+[data-template="onyx"] .testimonial-card__name,
+.t-onyx .testimonial-card__name { color: #fff; }
+[data-template="onyx"] .star-rating,
+.t-onyx .star-rating { color: var(--color-accent-1); }
+
+/* --- Contact -------------------------------------------------------------- */
+[data-template="onyx"] .contact,
+.t-onyx .contact { background: var(--color-bg-primary); }
+[data-template="onyx"] .form-input,
+[data-template="onyx"] .form-textarea,
+[data-template="onyx"] .form-select,
+.t-onyx .form-input,
+.t-onyx .form-textarea,
+.t-onyx .form-select {
+  background: var(--color-bg-secondary);
+  border-color: var(--color-border);
+  color: #fff;
+  border-radius: 0;
+}
+[data-template="onyx"] .form-input:focus,
+[data-template="onyx"] .form-textarea:focus,
+.t-onyx .form-input:focus,
+.t-onyx .form-textarea:focus {
+  border-color: var(--color-accent-1);
+  box-shadow: 0 0 0 3px rgba(204,0,0,0.15);
+}
+[data-template="onyx"] .form-label,
+.t-onyx .form-label { color: rgba(255,255,255,0.8); }
+
+/* --- Footer --------------------------------------------------------------- */
+[data-template="onyx"] .site-footer,
+.t-onyx .site-footer { background: #000; border-top: 1px solid var(--color-accent-1); }
+[data-template="onyx"] .footer__bar,
+.t-onyx .footer__bar { border-top-color: var(--color-border); }

@@ -1,0 +1,171 @@
+/* ==========================================================================
+   t03-crimson.css — Bold Editorial
+   White + Charcoal + Crimson Red. Magazine-style. Diagonal hero split.
+   ========================================================================== */
+
+/* --- Navigation ----------------------------------------------------------- */
+[data-template="crimson"] .site-header,
+.t-crimson .site-header {
+  background: #fff;
+  border-bottom: 2px solid var(--color-accent-1);
+}
+[data-template="crimson"] .site-header.is-sticky,
+.t-crimson .site-header.is-sticky {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+[data-template="crimson"] .site-branding__name,
+.t-crimson .site-branding__name {
+  font-family: var(--font-accent);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+[data-template="crimson"] .nav-menu li a,
+.t-crimson .nav-menu li a {
+  font-family: var(--font-accent);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-primary);
+}
+[data-template="crimson"] .nav-menu li a::after,
+.t-crimson .nav-menu li a::after { background: var(--color-accent-1); }
+[data-template="crimson"] .header__btn,
+.t-crimson .header__btn {
+  background: var(--color-accent-1);
+  color: #fff;
+  border-color: var(--color-accent-1);
+  border-radius: 0;
+  letter-spacing: var(--tracking-wider);
+}
+
+/* --- Hero ----------------------------------------------------------------- */
+[data-template="crimson"] .hero,
+.t-crimson .hero {
+  min-height: 100vh;
+  background: var(--color-bg-primary);
+  padding-top: var(--nav-height);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+[data-template="crimson"] .hero__bg,
+.t-crimson .hero__bg {
+  position: absolute;
+  right: 0; top: 0;
+  width: 50%;
+  height: 100%;
+  background: var(--color-bg-accent);
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
+}
+[data-template="crimson"] .hero__overlay,
+.t-crimson .hero__overlay {
+  background: transparent;
+}
+[data-template="crimson"] .hero__inner,
+.t-crimson .hero__inner {
+  padding-block: var(--space-24);
+  z-index: 2;
+  max-width: 620px;
+}
+[data-template="crimson"] .hero__eyebrow,
+.t-crimson .hero__eyebrow {
+  color: var(--color-accent-1);
+  font-family: var(--font-accent);
+  letter-spacing: var(--tracking-widest);
+}
+[data-template="crimson"] .hero__heading,
+.t-crimson .hero__heading {
+  font-family: var(--font-display);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-display);
+  font-style: italic;
+  font-weight: 700;
+}
+[data-template="crimson"] .hero__heading em,
+.t-crimson .hero__heading em {
+  font-style: normal;
+  color: var(--color-accent-1);
+}
+[data-template="crimson"] .hero__sub,
+.t-crimson .hero__sub {
+  color: var(--color-text-secondary);
+}
+[data-template="crimson"] .hero__scroll-indicator,
+.t-crimson .hero__scroll-indicator { color: var(--color-text-muted); }
+
+/* --- About ---------------------------------------------------------------- */
+[data-template="crimson"] .about,
+.t-crimson .about { background: var(--color-bg-primary); }
+[data-template="crimson"] .about__quote,
+.t-crimson .about__quote {
+  border-left-color: var(--color-accent-1);
+  color: var(--color-text-primary);
+}
+[data-template="crimson"] .about__visual,
+.t-crimson .about__visual { border-radius: 0; }
+
+/* --- Practice Areas ------------------------------------------------------- */
+[data-template="crimson"] .practice-areas,
+.t-crimson .practice-areas { background: var(--color-bg-secondary); }
+[data-template="crimson"] .practice-card,
+.t-crimson .practice-card {
+  border-radius: 0;
+  border: none;
+  border-top: 3px solid var(--color-border);
+}
+[data-template="crimson"] .practice-card:hover,
+.t-crimson .practice-card:hover {
+  border-top-color: var(--color-accent-1);
+  box-shadow: none;
+  transform: none;
+}
+[data-template="crimson"] .practice-card__title,
+.t-crimson .practice-card__title { font-family: var(--font-accent); font-style: normal; font-weight: 700; }
+
+/* --- Stats ---------------------------------------------------------------- */
+[data-template="crimson"] .stats,
+.t-crimson .stats { background: var(--color-bg-accent); }
+[data-template="crimson"] .stat-item__label,
+.t-crimson .stat-item__label { color: rgba(255,255,255,0.7); }
+
+/* --- Testimonials --------------------------------------------------------- */
+[data-template="crimson"] .testimonials,
+.t-crimson .testimonials { background: var(--color-bg-primary); }
+[data-template="crimson"] .testimonial-card,
+.t-crimson .testimonial-card { border-radius: 0; border: 1px solid var(--color-border); }
+[data-template="crimson"] .testimonial-card__mark,
+.t-crimson .testimonial-card__mark { color: var(--color-accent-1); opacity: 0.5; }
+
+/* --- Contact -------------------------------------------------------------- */
+[data-template="crimson"] .form-input,
+[data-template="crimson"] .form-textarea,
+[data-template="crimson"] .form-select,
+.t-crimson .form-input,
+.t-crimson .form-textarea,
+.t-crimson .form-select {
+  border-radius: 0;
+  border-left: 3px solid var(--color-border);
+  background: var(--color-bg-secondary);
+}
+[data-template="crimson"] .form-input:focus,
+[data-template="crimson"] .form-textarea:focus,
+.t-crimson .form-input:focus,
+.t-crimson .form-textarea:focus {
+  border-left-color: var(--color-accent-1);
+}
+
+/* --- Footer --------------------------------------------------------------- */
+[data-template="crimson"] .site-footer,
+.t-crimson .site-footer { background: var(--color-bg-accent); }
+
+/* --- Responsive ----------------------------------------------------------- */
+@media (max-width: 768px) {
+  [data-template="crimson"] .hero,
+  .t-crimson .hero { grid-template-columns: 1fr; }
+  [data-template="crimson"] .hero__bg,
+  .t-crimson .hero__bg { display: none; }
+}

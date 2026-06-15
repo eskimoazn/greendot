@@ -1,0 +1,418 @@
+/* ==========================================================================
+   t02-azure.css — Corporate Clean
+   White/navy split hero, grid overlay, blue CTA, bordered card grid.
+   ========================================================================== */
+
+/* --- Header / Navigation -------------------------------------------------- */
+[data-template="azure"] .site-header,
+.t-azure .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  background: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
+  transition: box-shadow var(--duration-200) var(--ease-out);
+}
+
+[data-template="azure"] .site-header.is-sticky,
+.t-azure .site-header.is-sticky {
+  box-shadow: var(--shadow-md);
+}
+
+[data-template="azure"] .site-branding,
+.t-azure .site-branding {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--color-accent-1);
+}
+
+[data-template="azure"] .main-navigation,
+.t-azure .main-navigation {
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+  margin-left: auto;
+}
+
+[data-template="azure"] .main-navigation a,
+.t-azure .main-navigation a {
+  color: var(--color-accent-1);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color var(--duration-200) var(--ease-out);
+}
+
+[data-template="azure"] .main-navigation a:hover,
+.t-azure .main-navigation a:hover {
+  color: var(--color-accent-2);
+}
+
+/* --- Hero ----------------------------------------------------------------- */
+[data-template="azure"] .hero,
+.t-azure .hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 88vh;
+  background: var(--color-bg-primary);
+}
+
+[data-template="azure"] .hero__bg,
+.t-azure .hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, var(--color-border) 0, var(--color-border) 1px, transparent 1px, transparent 40px),
+    repeating-linear-gradient(90deg, var(--color-border) 0, var(--color-border) 1px, transparent 1px, transparent 40px);
+  opacity: 0.35;
+}
+
+[data-template="azure"] .hero__overlay,
+.t-azure .hero__overlay {
+  position: absolute;
+  inset: 0 50% 0 0;
+  background: var(--color-accent-1);
+}
+
+[data-template="azure"] .hero__inner,
+.t-azure .hero__inner {
+  position: relative;
+  z-index: 2;
+  grid-column: 1 / 2;
+  align-self: center;
+  padding: var(--space-10);
+  color: var(--color-text-inverse);
+}
+
+[data-template="azure"] .hero__eyebrow,
+.t-azure .hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  color: var(--color-accent-3);
+  margin-bottom: var(--space-3);
+}
+
+[data-template="azure"] .hero__heading,
+.t-azure .hero__heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: var(--space-4);
+}
+
+[data-template="azure"] .hero__sub,
+.t-azure .hero__sub {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 460px;
+  margin-bottom: var(--space-6);
+}
+
+[data-template="azure"] .hero__scroll-indicator,
+.t-azure .hero__scroll-indicator {
+  position: absolute;
+  bottom: var(--space-5);
+  left: var(--space-10);
+  z-index: 2;
+  color: var(--color-accent-3);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* --- Buttons -------------------------------------------------------------- */
+[data-template="azure"] .btn,
+.t-azure .btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--duration-200) var(--ease-out);
+}
+
+[data-template="azure"] .btn--primary,
+.t-azure .btn--primary {
+  background: var(--color-accent-2);
+  color: var(--color-text-inverse);
+  border: 2px solid var(--color-accent-2);
+}
+
+[data-template="azure"] .btn--primary:hover,
+.t-azure .btn--primary:hover {
+  background: var(--color-accent-1);
+  border-color: var(--color-accent-1);
+}
+
+[data-template="azure"] .btn--ghost,
+.t-azure .btn--ghost {
+  background: transparent;
+  color: var(--color-text-inverse);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+[data-template="azure"] .btn--outline,
+.t-azure .btn--outline {
+  background: transparent;
+  color: var(--color-accent-2);
+  border: 2px solid var(--color-accent-2);
+}
+
+[data-template="azure"] .btn--outline:hover,
+.t-azure .btn--outline:hover {
+  background: var(--color-accent-2);
+  color: var(--color-text-inverse);
+}
+
+/* --- Sections ------------------------------------------------------------- */
+[data-template="azure"] .section,
+.t-azure .section {
+  padding: var(--space-12) 0;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+[data-template="azure"] .section:nth-of-type(even),
+.t-azure .section:nth-of-type(even) {
+  background: var(--color-bg-secondary);
+}
+
+[data-template="azure"] .container,
+.t-azure .container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+[data-template="azure"] .section__eyebrow,
+.t-azure .section__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-accent-2);
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-bottom: var(--space-2);
+}
+
+[data-template="azure"] .section__title,
+.t-azure .section__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  color: var(--color-accent-1);
+  margin-bottom: var(--space-8);
+}
+
+[data-template="azure"] .grid-2,
+.t-azure .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
+[data-template="azure"] .grid-3,
+.t-azure .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+[data-template="azure"] .grid-4,
+.t-azure .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); }
+
+/* --- About ---------------------------------------------------------------- */
+[data-template="azure"] .about__grid,
+.t-azure .about__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+[data-template="azure"] .about__image,
+.t-azure .about__image {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+[data-template="azure"] .about__badge,
+.t-azure .about__badge {
+  display: inline-block;
+  background: var(--color-accent-2);
+  color: var(--color-text-inverse);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* --- Cards ----------------------------------------------------------------- */
+[data-template="azure"] .pa-card,
+[data-template="azure"] .attorney-card,
+.t-azure .pa-card,
+.t-azure .attorney-card {
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-accent-2);
+  border-radius: var(--radius-sm);
+  padding: var(--space-6);
+  transition: box-shadow var(--duration-200) var(--ease-out),
+              transform var(--duration-200) var(--ease-out);
+}
+
+[data-template="azure"] .pa-card:hover,
+[data-template="azure"] .attorney-card:hover,
+.t-azure .pa-card:hover,
+.t-azure .attorney-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+[data-template="azure"] .pa-card__icon,
+.t-azure .pa-card__icon {
+  color: var(--color-accent-2);
+  font-size: 1.9rem;
+  margin-bottom: var(--space-3);
+}
+
+[data-template="azure"] .pa-card__title,
+[data-template="azure"] .attorney-card__name,
+.t-azure .pa-card__title,
+.t-azure .attorney-card__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--color-accent-1);
+  margin-bottom: var(--space-2);
+}
+
+[data-template="azure"] .pa-card__desc,
+[data-template="azure"] .attorney-card__title,
+.t-azure .pa-card__desc,
+.t-azure .attorney-card__title {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+[data-template="azure"] .attorney-card__photo,
+.t-azure .attorney-card__photo {
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-4);
+}
+
+/* --- Stats ---------------------------------------------------------------- */
+[data-template="azure"] .stats,
+.t-azure .stats {
+  background: var(--color-accent-1);
+  color: var(--color-text-inverse);
+}
+
+[data-template="azure"] .stats__grid,
+.t-azure .stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  text-align: center;
+}
+
+[data-template="azure"] .stat__number,
+.t-azure .stat__number {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  color: var(--color-accent-3);
+}
+
+[data-template="azure"] .stat__label,
+.t-azure .stat__label {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  margin-top: var(--space-2);
+  opacity: 0.9;
+}
+
+/* --- Testimonials --------------------------------------------------------- */
+[data-template="azure"] .testimonial,
+.t-azure .testimonial {
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+[data-template="azure"] .testimonial__quote,
+.t-azure .testimonial__quote {
+  font-size: 1.05rem;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+[data-template="azure"] .testimonial__name,
+.t-azure .testimonial__name {
+  font-weight: 700;
+  color: var(--color-accent-1);
+}
+
+[data-template="azure"] .star,
+.t-azure .star { color: var(--color-border); }
+[data-template="azure"] .star--filled,
+.t-azure .star--filled { color: var(--color-accent-3); }
+
+/* --- Contact -------------------------------------------------------------- */
+[data-template="azure"] .contact__grid,
+.t-azure .contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+}
+
+[data-template="azure"] .contact-form input,
+[data-template="azure"] .contact-form textarea,
+.t-azure .contact-form input,
+.t-azure .contact-form textarea {
+  width: 100%;
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  padding: var(--space-3);
+  margin-bottom: var(--space-4);
+  font-family: var(--font-body);
+}
+
+[data-template="azure"] .contact-form input:focus,
+[data-template="azure"] .contact-form textarea:focus,
+.t-azure .contact-form input:focus,
+.t-azure .contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-accent-2);
+  box-shadow: 0 0 0 3px var(--color-bg-accent);
+}
+
+/* --- Footer --------------------------------------------------------------- */
+[data-template="azure"] .site-footer,
+.t-azure .site-footer {
+  background: var(--color-accent-1);
+  color: var(--color-text-inverse);
+  padding: var(--space-10) 0 var(--space-6);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  [data-template="azure"] .hero, .t-azure .hero { grid-template-columns: 1fr; }
+  [data-template="azure"] .hero__overlay, .t-azure .hero__overlay { inset: 0; }
+  [data-template="azure"] .hero__inner, .t-azure .hero__inner { grid-column: 1; }
+  [data-template="azure"] .grid-2, .t-azure .grid-2,
+  [data-template="azure"] .grid-3, .t-azure .grid-3,
+  [data-template="azure"] .grid-4, .t-azure .grid-4,
+  [data-template="azure"] .about__grid, .t-azure .about__grid,
+  [data-template="azure"] .contact__grid, .t-azure .contact__grid,
+  [data-template="azure"] .stats__grid, .t-azure .stats__grid {
+    grid-template-columns: 1fr;
+  }
+}

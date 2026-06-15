@@ -1,0 +1,110 @@
+/* ==========================================================================
+   t10-rosewood.css — Boutique Warmth
+   Dusty rose + Rosewood + Blush. Intimate, boutique, soft curves.
+   ========================================================================== */
+
+/* --- Navigation ----------------------------------------------------------- */
+[data-template="rosewood"] .site-header,
+.t-rosewood .site-header {
+  background: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
+}
+[data-template="rosewood"] .site-header.is-sticky,
+.t-rosewood .site-header.is-sticky {
+  box-shadow: 0 4px 20px rgba(107,44,58,0.08);
+}
+[data-template="rosewood"] .site-branding__name,
+.t-rosewood .site-branding__name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: var(--font-size-xl);
+  color: var(--color-text-primary);
+}
+[data-template="rosewood"] .nav-menu li a,
+.t-rosewood .nav-menu li a {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  letter-spacing: var(--tracking-wide);
+}
+[data-template="rosewood"] .nav-menu li a::after,
+.t-rosewood .nav-menu li a::after { background: var(--color-accent-1); }
+[data-template="rosewood"] .header__btn,
+.t-rosewood .header__btn {
+  background: var(--color-accent-1);
+  border-color: var(--color-accent-1);
+  color: #fff;
+  border-radius: var(--radius-full);
+}
+
+/* --- Hero ----------------------------------------------------------------- */
+[data-template="rosewood"] .hero,
+.t-rosewood .hero { min-height: 90vh; }
+[data-template="rosewood"] .hero__bg,
+.t-rosewood .hero__bg {
+  background: linear-gradient(150deg, var(--color-hero-bg) 0%, #8b3a4c 100%);
+}
+[data-template="rosewood"] .hero__overlay,
+.t-rosewood .hero__overlay {
+  background: linear-gradient(180deg, rgba(107,44,58,0.4) 0%, rgba(107,44,58,0.7) 100%);
+}
+[data-template="rosewood"] .hero__eyebrow,
+.t-rosewood .hero__eyebrow { color: var(--color-accent-3); }
+[data-template="rosewood"] .hero__heading,
+.t-rosewood .hero__heading {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-style: italic;
+}
+[data-template="rosewood"] .hero__inner,
+.t-rosewood .hero__inner { max-width: 700px; }
+
+/* --- About ---------------------------------------------------------------- */
+[data-template="rosewood"] .about,
+.t-rosewood .about { background: var(--color-bg-primary); }
+[data-template="rosewood"] .about__quote,
+.t-rosewood .about__quote { border-left-color: var(--color-accent-1); color: var(--color-accent-2); }
+[data-template="rosewood"] .about__visual,
+.t-rosewood .about__visual {
+  border-radius: var(--radius-full) var(--radius-lg) var(--radius-full) var(--radius-lg);
+}
+
+/* --- Practice Areas ------------------------------------------------------- */
+[data-template="rosewood"] .practice-areas,
+.t-rosewood .practice-areas { background: var(--color-bg-secondary); }
+[data-template="rosewood"] .practice-card,
+.t-rosewood .practice-card {
+  border-radius: var(--radius-xl);
+  border-top: 3px solid var(--color-accent-3);
+}
+[data-template="rosewood"] .practice-card:hover,
+.t-rosewood .practice-card:hover {
+  border-top-color: var(--color-accent-1);
+  box-shadow: 0 8px 30px rgba(196,104,122,0.2);
+}
+
+/* --- Stats ---------------------------------------------------------------- */
+[data-template="rosewood"] .stats,
+.t-rosewood .stats { background: var(--color-bg-accent); }
+[data-template="rosewood"] .stat-item__number,
+.t-rosewood .stat-item__number { color: var(--color-accent-3); }
+
+/* --- Testimonials --------------------------------------------------------- */
+[data-template="rosewood"] .testimonials,
+.t-rosewood .testimonials { background: var(--color-bg-secondary); }
+[data-template="rosewood"] .testimonial-card,
+.t-rosewood .testimonial-card {
+  border-radius: var(--radius-xl);
+  border-color: var(--color-border);
+  background: var(--color-bg-card);
+}
+[data-template="rosewood"] .star-rating,
+.t-rosewood .star-rating { color: var(--color-accent-1); }
+
+/* --- Footer --------------------------------------------------------------- */
+[data-template="rosewood"] .site-footer,
+.t-rosewood .site-footer { background: var(--color-bg-accent); }
+[data-template="rosewood"] .footer__heading,
+.t-rosewood .footer__heading { color: var(--color-accent-3); }

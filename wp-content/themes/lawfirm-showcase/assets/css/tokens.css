@@ -1,0 +1,388 @@
+/* ==========================================================================
+   tokens.css — Design Token System
+   All CSS custom properties. Templates scope their overrides by data-template.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Global Tokens
+   -------------------------------------------------------------------------- */
+:root {
+  /* Spacing (4px base) */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Container */
+  --container-max:     1280px;
+  --container-padding: clamp(1.25rem, 5vw, 3rem);
+
+  /* Nav */
+  --nav-height: 80px;
+
+  /* Type scale */
+  --font-size-xs:      0.75rem;
+  --font-size-sm:      0.875rem;
+  --font-size-base:    1rem;
+  --font-size-md:      1.125rem;
+  --font-size-lg:      1.25rem;
+  --font-size-xl:      1.5rem;
+  --font-size-2xl:     2rem;
+  --font-size-3xl:     2.5rem;
+  --font-size-4xl:     3.5rem;
+  --font-size-5xl:     5rem;
+  --font-size-display: clamp(3rem, 7vw, 7rem);
+
+  /* Weights */
+  --font-weight-light:    300;
+  --font-weight-regular:  400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+  --font-weight-black:    900;
+
+  /* Leading */
+  --leading-tight:   1.1;
+  --leading-snug:    1.3;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.8;
+
+  /* Tracking */
+  --tracking-tight:   -0.02em;
+  --tracking-normal:   0em;
+  --tracking-wide:     0.05em;
+  --tracking-wider:    0.1em;
+  --tracking-widest:   0.2em;
+
+  /* Radius */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+  --shadow-xl: 0 20px 60px rgba(0,0,0,0.24);
+
+  /* Z-index */
+  --z-below:  -1;
+  --z-base:    0;
+  --z-raised: 10;
+  --z-nav:   100;
+  --z-modal: 200;
+  --z-toast: 300;
+
+  /* Motion */
+  --ease-out:         cubic-bezier(0.0, 0.0, 0.2, 1);
+  --ease-in:          cubic-bezier(0.4, 0.0, 1, 1);
+  --ease-in-out:      cubic-bezier(0.4, 0.0, 0.2, 1);
+  --ease-out-expo:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-back:    cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-in-out-cubic:cubic-bezier(0.65, 0, 0.35, 1);
+
+  --duration-fast:  150ms;
+  --duration-base:  250ms;
+  --duration-300:   300ms;
+  --duration-slow:  500ms;
+  --duration-xslow: 800ms;
+}
+
+/* --------------------------------------------------------------------------
+   01 · Obsidian — Dark Luxury
+   -------------------------------------------------------------------------- */
+.t-obsidian, [data-template="obsidian"] {
+  --color-bg-primary:   #0f0f0f;
+  --color-bg-secondary: #1a1a1a;
+  --color-bg-accent:    #252525;
+  --color-bg-card:      #1e1e1e;
+  --color-text-primary: #f5f0e8;
+  --color-text-secondary:#b8a98a;
+  --color-text-muted:   #6b6355;
+  --color-text-inverse: #f5f0e8;
+  --color-accent-1:     #c9a84c;
+  --color-accent-2:     #e8d5a3;
+  --color-accent-3:     #8b6914;
+  --color-border:       rgba(201,168,76,0.2);
+  --color-border-strong:rgba(201,168,76,0.5);
+  --color-overlay:      rgba(15,15,15,0.75);
+  --color-hero-bg:      #0f0f0f;
+  --font-display:       'Cormorant Garamond', Georgia, serif;
+  --font-body:          'Jost', sans-serif;
+  --font-accent:        'Cormorant', Georgia, serif;
+}
+
+/* --------------------------------------------------------------------------
+   02 · Azure — Corporate Clean
+   -------------------------------------------------------------------------- */
+.t-azure, [data-template="azure"] {
+  --color-bg-primary:   #ffffff;
+  --color-bg-secondary: #f4f7fb;
+  --color-bg-accent:    #e8f0fe;
+  --color-bg-card:      #ffffff;
+  --color-text-primary: #0d1b3e;
+  --color-text-secondary:#3d5a8a;
+  --color-text-muted:   #6b82a8;
+  --color-text-inverse: #ffffff;
+  --color-accent-1:     #1a56db;
+  --color-accent-2:     #0d1b3e;
+  --color-accent-3:     #3b82f6;
+  --color-border:       #d1daf5;
+  --color-border-strong:#1a56db;
+  --color-overlay:      rgba(13,27,62,0.75);
+  --color-hero-bg:      #0d1b3e;
+  --font-display:       'Inter', sans-serif;
+  --font-body:          'Inter', sans-serif;
+  --font-accent:        'DM Serif Display', serif;
+}
+
+/* --------------------------------------------------------------------------
+   03 · Crimson — Bold Editorial
+   -------------------------------------------------------------------------- */
+.t-crimson, [data-template="crimson"] {
+  --color-bg-primary:   #ffffff;
+  --color-bg-secondary: #fafafa;
+  --color-bg-accent:    #1a1a1a;
+  --color-bg-card:      #f8f8f8;
+  --color-text-primary: #111111;
+  --color-text-secondary:#444444;
+  --color-text-muted:   #888888;
+  --color-text-inverse: #ffffff;
+  --color-accent-1:     #c0392b;
+  --color-accent-2:     #96281b;
+  --color-accent-3:     #e74c3c;
+  --color-border:       #e5e5e5;
+  --color-border-strong:#c0392b;
+  --color-overlay:      rgba(17,17,17,0.82);
+  --color-hero-bg:      #111111;
+  --font-display:       'Playfair Display', Georgia, serif;
+  --font-body:          'Source Sans 3', sans-serif;
+  --font-accent:        'Barlow Condensed', sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   04 · Slate — Ultra-Minimal
+   -------------------------------------------------------------------------- */
+.t-slate, [data-template="slate"] {
+  --color-bg-primary:   #f7f7f5;
+  --color-bg-secondary: #eeede9;
+  --color-bg-accent:    #1f1f1e;
+  --color-bg-card:      #ffffff;
+  --color-text-primary: #1f1f1e;
+  --color-text-secondary:#5c5c58;
+  --color-text-muted:   #a8a8a0;
+  --color-text-inverse: #f7f7f5;
+  --color-accent-1:     #b8855a;
+  --color-accent-2:     #1f1f1e;
+  --color-accent-3:     #d4a57a;
+  --color-border:       #ddddd8;
+  --color-border-strong:#b8855a;
+  --color-overlay:      rgba(31,31,30,0.65);
+  --color-hero-bg:      #1f1f1e;
+  --font-display:       'DM Serif Display', Georgia, serif;
+  --font-body:          'DM Sans', sans-serif;
+  --font-accent:        'DM Sans', sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   05 · Verdant — Organic Authority
+   -------------------------------------------------------------------------- */
+.t-verdant, [data-template="verdant"] {
+  --color-bg-primary:   #f8f6f0;
+  --color-bg-secondary: #eee9de;
+  --color-bg-accent:    #1d3a2f;
+  --color-bg-card:      #ffffff;
+  --color-text-primary: #1d3a2f;
+  --color-text-secondary:#3a6355;
+  --color-text-muted:   #7a9e8e;
+  --color-text-inverse: #f8f6f0;
+  --color-accent-1:     #b09050;
+  --color-accent-2:     #1d3a2f;
+  --color-accent-3:     #4a8c6e;
+  --color-border:       #d8d2c4;
+  --color-border-strong:#b09050;
+  --color-overlay:      rgba(29,58,47,0.75);
+  --color-hero-bg:      #1d3a2f;
+  --font-display:       'Lora', Georgia, serif;
+  --font-body:          'Karla', sans-serif;
+  --font-accent:        'Lora', Georgia, serif;
+}
+
+/* --------------------------------------------------------------------------
+   06 · Amber — Approachable Warm
+   -------------------------------------------------------------------------- */
+.t-amber, [data-template="amber"] {
+  --color-bg-primary:   #fdf8ef;
+  --color-bg-secondary: #f5ede0;
+  --color-bg-accent:    #3d1f00;
+  --color-bg-card:      #fffdf7;
+  --color-text-primary: #3d1f00;
+  --color-text-secondary:#7a4a1a;
+  --color-text-muted:   #b8845a;
+  --color-text-inverse: #fdf8ef;
+  --color-accent-1:     #d4820a;
+  --color-accent-2:     #3d1f00;
+  --color-accent-3:     #f0a830;
+  --color-border:       #e8d9c0;
+  --color-border-strong:#d4820a;
+  --color-overlay:      rgba(61,31,0,0.72);
+  --color-hero-bg:      #3d1f00;
+  --font-display:       'Merriweather', Georgia, serif;
+  --font-body:          'Nunito', sans-serif;
+  --font-accent:        'Merriweather', serif;
+}
+
+/* --------------------------------------------------------------------------
+   07 · Midnight — Deep Prestige
+   -------------------------------------------------------------------------- */
+.t-midnight, [data-template="midnight"] {
+  --color-bg-primary:   #060d1f;
+  --color-bg-secondary: #0d1a35;
+  --color-bg-accent:    #0a1428;
+  --color-bg-card:      #0f1e3d;
+  --color-text-primary: #e8eef8;
+  --color-text-secondary:#8aa4c8;
+  --color-text-muted:   #4a6080;
+  --color-text-inverse: #060d1f;
+  --color-accent-1:     #00d4ff;
+  --color-accent-2:     #0099cc;
+  --color-accent-3:     #c0d8f0;
+  --color-border:       rgba(0,212,255,0.15);
+  --color-border-strong:rgba(0,212,255,0.4);
+  --color-overlay:      rgba(6,13,31,0.85);
+  --color-hero-bg:      #060d1f;
+  --font-display:       'Space Grotesk', sans-serif;
+  --font-body:          'IBM Plex Sans', sans-serif;
+  --font-accent:        'Space Grotesk', sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   08 · Chalk — Soft Editorial
+   -------------------------------------------------------------------------- */
+.t-chalk, [data-template="chalk"] {
+  --color-bg-primary:   #f6f4f0;
+  --color-bg-secondary: #ede9e2;
+  --color-bg-accent:    #2a2926;
+  --color-bg-card:      #ffffff;
+  --color-text-primary: #2a2926;
+  --color-text-secondary:#5a5752;
+  --color-text-muted:   #9a9690;
+  --color-text-inverse: #f6f4f0;
+  --color-accent-1:     #7a8c78;
+  --color-accent-2:     #2a2926;
+  --color-accent-3:     #a8bca6;
+  --color-border:       #e0dcd5;
+  --color-border-strong:#7a8c78;
+  --color-overlay:      rgba(42,41,38,0.65);
+  --color-hero-bg:      #2a2926;
+  --font-display:       'Libre Baskerville', Georgia, serif;
+  --font-body:          'Work Sans', sans-serif;
+  --font-accent:        'Libre Baskerville', serif;
+}
+
+/* --------------------------------------------------------------------------
+   09 · Titanium — Modern Tech-Law
+   -------------------------------------------------------------------------- */
+.t-titanium, [data-template="titanium"] {
+  --color-bg-primary:   #f0f0f0;
+  --color-bg-secondary: #e4e4e4;
+  --color-bg-accent:    #0a0a0a;
+  --color-bg-card:      #f8f8f8;
+  --color-text-primary: #0a0a0a;
+  --color-text-secondary:#3a3a3a;
+  --color-text-muted:   #7a7a7a;
+  --color-text-inverse: #f0f0f0;
+  --color-accent-1:     #a3e635;
+  --color-accent-2:     #0a0a0a;
+  --color-accent-3:     #6b9e10;
+  --color-border:       #d0d0d0;
+  --color-border-strong:#a3e635;
+  --color-overlay:      rgba(10,10,10,0.82);
+  --color-hero-bg:      #0a0a0a;
+  --font-display:       'Barlow Condensed', sans-serif;
+  --font-body:          'Barlow', sans-serif;
+  --font-accent:        'Exo 2', sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   10 · Rosewood — Boutique Warmth
+   -------------------------------------------------------------------------- */
+.t-rosewood, [data-template="rosewood"] {
+  --color-bg-primary:   #fdf6f3;
+  --color-bg-secondary: #f5e8e2;
+  --color-bg-accent:    #6b2c3a;
+  --color-bg-card:      #fffaf8;
+  --color-text-primary: #3a1520;
+  --color-text-secondary:#7a4050;
+  --color-text-muted:   #b8808a;
+  --color-text-inverse: #fdf6f3;
+  --color-accent-1:     #c4687a;
+  --color-accent-2:     #6b2c3a;
+  --color-accent-3:     #e8a8b2;
+  --color-border:       #f0d8d8;
+  --color-border-strong:#c4687a;
+  --color-overlay:      rgba(107,44,58,0.72);
+  --color-hero-bg:      #6b2c3a;
+  --font-display:       'Spectral', Georgia, serif;
+  --font-body:          'Lato', sans-serif;
+  --font-accent:        'Spectral', serif;
+}
+
+/* --------------------------------------------------------------------------
+   11 · Cobalt — Dynamic Energy
+   -------------------------------------------------------------------------- */
+.t-cobalt, [data-template="cobalt"] {
+  --color-bg-primary:   #ffffff;
+  --color-bg-secondary: #f0f4ff;
+  --color-bg-accent:    #0038a8;
+  --color-bg-card:      #ffffff;
+  --color-text-primary: #001a5c;
+  --color-text-secondary:#0038a8;
+  --color-text-muted:   #6080cc;
+  --color-text-inverse: #ffffff;
+  --color-accent-1:     #ff6b35;
+  --color-accent-2:     #0038a8;
+  --color-accent-3:     #ffb08a;
+  --color-border:       #ccd8f5;
+  --color-border-strong:#ff6b35;
+  --color-overlay:      rgba(0,56,168,0.82);
+  --color-hero-bg:      #0038a8;
+  --font-display:       'Anton', sans-serif;
+  --font-body:          'Roboto Condensed', sans-serif;
+  --font-accent:        'Rajdhani', sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   12 · Onyx — Stark Power
+   -------------------------------------------------------------------------- */
+.t-onyx, [data-template="onyx"] {
+  --color-bg-primary:   #000000;
+  --color-bg-secondary: #0d0d0d;
+  --color-bg-accent:    #1a0000;
+  --color-bg-card:      #111111;
+  --color-text-primary: #ffffff;
+  --color-text-secondary:#cccccc;
+  --color-text-muted:   #666666;
+  --color-text-inverse: #000000;
+  --color-accent-1:     #cc0000;
+  --color-accent-2:     #ff0000;
+  --color-accent-3:     #880000;
+  --color-border:       rgba(255,255,255,0.1);
+  --color-border-strong:rgba(204,0,0,0.6);
+  --color-overlay:      rgba(0,0,0,0.88);
+  --color-hero-bg:      #000000;
+  --font-display:       'Space Grotesk', sans-serif;
+  --font-body:          'Work Sans', sans-serif;
+  --font-accent:        'Barlow Condensed', sans-serif;
+}

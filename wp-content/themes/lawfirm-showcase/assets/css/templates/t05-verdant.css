@@ -1,0 +1,111 @@
+/* ==========================================================================
+   t05-verdant.css — Organic Authority
+   Forest green + warm white + brass gold. Natural, earthy, trustworthy.
+   ========================================================================== */
+
+/* --- Navigation ----------------------------------------------------------- */
+[data-template="verdant"] .site-header,
+.t-verdant .site-header {
+  background: transparent;
+}
+[data-template="verdant"] .site-header.is-sticky,
+.t-verdant .site-header.is-sticky {
+  background: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
+}
+[data-template="verdant"] .site-branding__name,
+.t-verdant .site-branding__name {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  color: var(--color-text-inverse);
+  font-weight: 700;
+}
+[data-template="verdant"] .site-header.is-sticky .site-branding__name,
+.t-verdant .site-header.is-sticky .site-branding__name { color: var(--color-text-primary); }
+[data-template="verdant"] .nav-menu li a,
+.t-verdant .nav-menu li a {
+  color: rgba(248,246,240,0.85);
+  font-family: var(--font-body);
+}
+[data-template="verdant"] .site-header.is-sticky .nav-menu li a,
+.t-verdant .site-header.is-sticky .nav-menu li a { color: var(--color-text-secondary); }
+[data-template="verdant"] .header__btn,
+.t-verdant .header__btn {
+  background: var(--color-accent-1);
+  border-color: var(--color-accent-1);
+  color: var(--color-bg-primary);
+  border-radius: var(--radius-full);
+}
+
+/* --- Hero ----------------------------------------------------------------- */
+[data-template="verdant"] .hero,
+.t-verdant .hero { min-height: 100vh; }
+[data-template="verdant"] .hero__bg,
+.t-verdant .hero__bg {
+  background: radial-gradient(ellipse at 40% 60%, #2a5443 0%, var(--color-hero-bg) 65%),
+              url('') center/cover no-repeat;
+  background-color: var(--color-hero-bg);
+}
+[data-template="verdant"] .hero__overlay,
+.t-verdant .hero__overlay {
+  background: linear-gradient(135deg, rgba(29,58,47,0.6) 0%, rgba(29,58,47,0.2) 100%);
+}
+[data-template="verdant"] .hero__heading,
+.t-verdant .hero__heading {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: var(--font-weight-regular);
+}
+[data-template="verdant"] .hero__eyebrow,
+.t-verdant .hero__eyebrow { color: var(--color-accent-1); }
+
+/* --- About ---------------------------------------------------------------- */
+[data-template="verdant"] .about,
+.t-verdant .about { background: var(--color-bg-primary); }
+[data-template="verdant"] .about__quote,
+.t-verdant .about__quote { border-left-color: var(--color-accent-1); }
+[data-template="verdant"] .about__visual,
+.t-verdant .about__visual {
+  border-radius: var(--radius-xl) var(--radius-xl) var(--radius-full) var(--radius-xl);
+}
+
+/* --- Practice Areas ------------------------------------------------------- */
+[data-template="verdant"] .practice-areas,
+.t-verdant .practice-areas { background: var(--color-bg-secondary); }
+[data-template="verdant"] .practice-card,
+.t-verdant .practice-card {
+  border-radius: var(--radius-xl) var(--radius-xl) var(--radius-xl) var(--radius-sm);
+  border-top: 3px solid var(--color-accent-1);
+}
+[data-template="verdant"] .practice-card:hover,
+.t-verdant .practice-card:hover {
+  border-top-color: var(--color-accent-2);
+  background: var(--color-bg-accent);
+}
+[data-template="verdant"] .practice-card:hover .practice-card__title,
+.t-verdant .practice-card:hover .practice-card__title { color: var(--color-text-inverse); }
+[data-template="verdant"] .practice-card:hover .practice-card__desc,
+.t-verdant .practice-card:hover .practice-card__desc { color: var(--color-text-inverse); opacity: 0.8; }
+[data-template="verdant"] .practice-card:hover .practice-card__link,
+.t-verdant .practice-card:hover .practice-card__link { color: var(--color-accent-1); }
+
+/* --- Stats ---------------------------------------------------------------- */
+[data-template="verdant"] .stats,
+.t-verdant .stats { background: var(--color-bg-accent); }
+[data-template="verdant"] .stat-item__number,
+.t-verdant .stat-item__number { color: var(--color-accent-1); }
+
+/* --- Testimonials --------------------------------------------------------- */
+[data-template="verdant"] .testimonials,
+.t-verdant .testimonials { background: var(--color-bg-primary); }
+[data-template="verdant"] .testimonial-card,
+.t-verdant .testimonial-card {
+  border-radius: var(--radius-xl) var(--radius-sm) var(--radius-xl) var(--radius-xl);
+  border-color: var(--color-border);
+}
+
+/* --- Footer --------------------------------------------------------------- */
+[data-template="verdant"] .site-footer,
+.t-verdant .site-footer { background: var(--color-bg-accent); }
+[data-template="verdant"] .footer__heading,
+.t-verdant .footer__heading { color: var(--color-accent-1); }

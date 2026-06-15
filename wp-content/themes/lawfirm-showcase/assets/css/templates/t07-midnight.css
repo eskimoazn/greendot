@@ -1,0 +1,480 @@
+/* ============================================================
+   T07 — MIDNIGHT
+   Deep prestige: navy hero, cyan glow, glowing accent lines,
+   tech-feel typography, blue/cyan gradient accents.
+   ============================================================ */
+
+[data-template="midnight"] .site-header,
+.t-midnight .site-header {
+  background: color-mix(in srgb, var(--color-bg-primary) 92%, transparent);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent-1) 22%, transparent);
+  transition: background var(--duration-base) var(--ease-out),
+    box-shadow var(--duration-base) var(--ease-out);
+}
+
+[data-template="midnight"] .site-header.is-sticky,
+.t-midnight .site-header.is-sticky {
+  background: color-mix(in srgb, var(--color-bg-primary) 96%, transparent);
+  box-shadow: 0 6px 32px color-mix(in srgb, var(--color-accent-1) 28%, transparent);
+}
+
+[data-template="midnight"] .site-branding,
+.t-midnight .site-branding {
+  font-family: var(--font-display);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  text-shadow: 0 0 18px color-mix(in srgb, var(--color-accent-1) 55%, transparent);
+}
+
+[data-template="midnight"] .main-navigation a,
+.t-midnight .main-navigation a {
+  position: relative;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+[data-template="midnight"] .main-navigation a::after,
+.t-midnight .main-navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent-1), var(--color-accent-2));
+  box-shadow: 0 0 10px var(--color-accent-1);
+  transition: width var(--duration-base) var(--ease-out);
+}
+
+[data-template="midnight"] .main-navigation a:hover,
+.t-midnight .main-navigation a:hover {
+  color: var(--color-text-primary);
+}
+
+[data-template="midnight"] .main-navigation a:hover::after,
+.t-midnight .main-navigation a:hover::after {
+  width: 100%;
+}
+
+/* ---------- Hero ---------- */
+[data-template="midnight"] .hero,
+.t-midnight .hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 78% 18%, color-mix(in srgb, var(--color-accent-1) 30%, transparent), transparent 45%),
+    radial-gradient(circle at 12% 82%, color-mix(in srgb, var(--color-accent-2) 24%, transparent), transparent 50%),
+    var(--color-bg-primary);
+  overflow: hidden;
+}
+
+[data-template="midnight"] .hero__bg,
+.t-midnight .hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-accent-1) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent-1) 8%, transparent) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(circle at 50% 40%, #000 30%, transparent 80%);
+}
+
+[data-template="midnight"] .hero__overlay,
+.t-midnight .hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, var(--color-overlay));
+}
+
+[data-template="midnight"] .hero__inner,
+.t-midnight .hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+[data-template="midnight"] .hero__eyebrow,
+.t-midnight .hero__eyebrow {
+  display: inline-block;
+  font-family: var(--font-display);
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--color-accent-1);
+  padding: 0.5em 1.2em;
+  border: 1px solid color-mix(in srgb, var(--color-accent-1) 45%, transparent);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 22px color-mix(in srgb, var(--color-accent-1) 35%, transparent);
+}
+
+[data-template="midnight"] .hero__heading,
+.t-midnight .hero__heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  line-height: 1.02;
+  margin: var(--space-md) 0;
+  color: var(--color-text-primary);
+  text-shadow: 0 0 42px color-mix(in srgb, var(--color-accent-1) 50%, transparent);
+}
+
+[data-template="midnight"] .hero__sub,
+.t-midnight .hero__sub {
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  color: var(--color-text-secondary);
+  max-width: 38ch;
+  line-height: 1.7;
+}
+
+[data-template="midnight"] .hero__cta,
+.t-midnight .hero__cta {
+  margin-top: var(--space-lg);
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+[data-template="midnight"] .hero__scroll-indicator,
+.t-midnight .hero__scroll-indicator {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26px;
+  height: 42px;
+  border: 2px solid color-mix(in srgb, var(--color-accent-1) 60%, transparent);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--color-accent-1) 40%, transparent);
+}
+
+/* ---------- Buttons ---------- */
+[data-template="midnight"] .btn,
+.t-midnight .btn {
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.95em 2em;
+  border-radius: var(--radius-full);
+  font-size: 0.86rem;
+  transition: transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-base) var(--ease-out);
+}
+
+[data-template="midnight"] .btn--primary,
+.t-midnight .btn--primary {
+  background: linear-gradient(120deg, var(--color-accent-1), var(--color-accent-2));
+  color: var(--color-text-inverse);
+  box-shadow: 0 0 28px color-mix(in srgb, var(--color-accent-1) 55%, transparent);
+}
+
+[data-template="midnight"] .btn--primary:hover,
+.t-midnight .btn--primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 44px color-mix(in srgb, var(--color-accent-1) 80%, transparent);
+}
+
+[data-template="midnight"] .btn--ghost,
+.t-midnight .btn--ghost {
+  background: transparent;
+  color: var(--color-text-primary);
+}
+
+[data-template="midnight"] .btn--outline,
+.t-midnight .btn--outline {
+  background: transparent;
+  color: var(--color-accent-1);
+  border: 1px solid color-mix(in srgb, var(--color-accent-1) 60%, transparent);
+}
+
+[data-template="midnight"] .btn--outline:hover,
+.t-midnight .btn--outline:hover {
+  box-shadow: inset 0 0 22px color-mix(in srgb, var(--color-accent-1) 30%, transparent);
+}
+
+/* ---------- Sections ---------- */
+[data-template="midnight"] .section,
+.t-midnight .section {
+  padding: var(--space-2xl) 0;
+  position: relative;
+}
+
+[data-template="midnight"] .container,
+.t-midnight .container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+[data-template="midnight"] .section__eyebrow,
+.t-midnight .section__eyebrow {
+  color: var(--color-accent-1);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-family: var(--font-display);
+}
+
+[data-template="midnight"] .section__title,
+.t-midnight .section__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  color: var(--color-text-primary);
+  margin: var(--space-sm) 0 var(--space-lg);
+}
+
+[data-template="midnight"] .section__title::after,
+.t-midnight .section__title::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 3px;
+  margin-top: var(--space-sm);
+  background: linear-gradient(90deg, var(--color-accent-1), transparent);
+  box-shadow: 0 0 14px var(--color-accent-1);
+}
+
+/* ---------- Grids ---------- */
+[data-template="midnight"] .grid-2,
+.t-midnight .grid-2 { display: grid; gap: var(--space-lg); grid-template-columns: repeat(2, 1fr); }
+[data-template="midnight"] .grid-3,
+.t-midnight .grid-3 { display: grid; gap: var(--space-lg); grid-template-columns: repeat(3, 1fr); }
+[data-template="midnight"] .grid-4,
+.t-midnight .grid-4 { display: grid; gap: var(--space-md); grid-template-columns: repeat(4, 1fr); }
+
+/* ---------- About ---------- */
+[data-template="midnight"] .about__grid,
+.t-midnight .about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+[data-template="midnight"] .about__image,
+.t-midnight .about__image {
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in srgb, var(--color-accent-1) 30%, transparent);
+  box-shadow: 0 0 40px color-mix(in srgb, var(--color-accent-1) 25%, transparent);
+}
+
+[data-template="midnight"] .about__badge,
+.t-midnight .about__badge {
+  background: var(--color-bg-accent);
+  color: var(--color-accent-1);
+  border: 1px solid color-mix(in srgb, var(--color-accent-1) 50%, transparent);
+  border-radius: var(--radius-full);
+  padding: 0.6em 1.4em;
+  box-shadow: 0 0 18px color-mix(in srgb, var(--color-accent-1) 40%, transparent);
+}
+
+/* ---------- Stats ---------- */
+[data-template="midnight"] .stats,
+.t-midnight .stats {
+  background: var(--color-bg-secondary);
+  border-block: 1px solid color-mix(in srgb, var(--color-accent-1) 18%, transparent);
+}
+
+[data-template="midnight"] .stats__grid,
+.t-midnight .stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  text-align: center;
+}
+
+[data-template="midnight"] .stat__number,
+.t-midnight .stat__number {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  color: var(--color-accent-1);
+  text-shadow: 0 0 24px color-mix(in srgb, var(--color-accent-1) 60%, transparent);
+}
+
+[data-template="midnight"] .stat__label,
+.t-midnight .stat__label {
+  color: var(--color-text-secondary);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* ---------- Practice areas ---------- */
+[data-template="midnight"] .pa-grid,
+.t-midnight .pa-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+[data-template="midnight"] .pa-card,
+.t-midnight .pa-card {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: transform var(--duration-base) var(--ease-out),
+    box-shadow var(--duration-base) var(--ease-out),
+    border-color var(--duration-base) var(--ease-out);
+}
+
+[data-template="midnight"] .pa-card:hover,
+.t-midnight .pa-card:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--color-accent-1) 60%, transparent);
+  box-shadow: 0 18px 50px color-mix(in srgb, var(--color-accent-1) 30%, transparent);
+}
+
+[data-template="midnight"] .pa-card__icon,
+.t-midnight .pa-card__icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2));
+  color: var(--color-text-inverse);
+  box-shadow: 0 0 22px color-mix(in srgb, var(--color-accent-1) 50%, transparent);
+}
+
+[data-template="midnight"] .pa-card__title,
+.t-midnight .pa-card__title {
+  font-family: var(--font-display);
+  color: var(--color-text-primary);
+  margin: var(--space-md) 0 var(--space-sm);
+}
+
+[data-template="midnight"] .pa-card__desc,
+.t-midnight .pa-card__desc { color: var(--color-text-secondary); line-height: 1.65; }
+
+/* ---------- Attorneys ---------- */
+[data-template="midnight"] .attorney-grid,
+.t-midnight .attorney-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+[data-template="midnight"] .attorney-card__photo,
+.t-midnight .attorney-card__photo {
+  border-radius: var(--radius-md);
+  border: 1px solid color-mix(in srgb, var(--color-accent-1) 28%, transparent);
+  filter: grayscale(0.4);
+  transition: filter var(--duration-base) var(--ease-out),
+    box-shadow var(--duration-base) var(--ease-out);
+}
+
+[data-template="midnight"] .attorney-card:hover .attorney-card__photo,
+.t-midnight .attorney-card:hover .attorney-card__photo {
+  filter: grayscale(0);
+  box-shadow: 0 0 30px color-mix(in srgb, var(--color-accent-1) 45%, transparent);
+}
+
+[data-template="midnight"] .attorney-card__name,
+.t-midnight .attorney-card__name {
+  font-family: var(--font-display);
+  color: var(--color-text-primary);
+  margin-top: var(--space-md);
+}
+
+[data-template="midnight"] .attorney-card__title,
+.t-midnight .attorney-card__title { color: var(--color-accent-1); font-size: 0.85rem; letter-spacing: 0.08em; }
+
+/* ---------- Testimonials ---------- */
+[data-template="midnight"] .testimonial-grid,
+.t-midnight .testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+[data-template="midnight"] .testimonial,
+.t-midnight .testimonial {
+  background: var(--color-bg-secondary);
+  border-left: 3px solid var(--color-accent-1);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: inset 0 0 30px color-mix(in srgb, var(--color-accent-1) 10%, transparent);
+}
+
+[data-template="midnight"] .testimonial__quote,
+.t-midnight .testimonial__quote { color: var(--color-text-primary); font-style: italic; line-height: 1.7; }
+[data-template="midnight"] .testimonial__name,
+.t-midnight .testimonial__name { color: var(--color-accent-1); margin-top: var(--space-md); font-family: var(--font-display); }
+
+[data-template="midnight"] .stars,
+.t-midnight .stars { display: inline-flex; gap: 4px; }
+[data-template="midnight"] .star,
+.t-midnight .star { color: var(--color-border); }
+[data-template="midnight"] .star--filled,
+.t-midnight .star--filled { color: var(--color-accent-1); text-shadow: 0 0 10px var(--color-accent-1); }
+
+/* ---------- Contact ---------- */
+[data-template="midnight"] .contact__grid,
+.t-midnight .contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+[data-template="midnight"] .contact-form input,
+[data-template="midnight"] .contact-form textarea,
+.t-midnight .contact-form input,
+.t-midnight .contact-form textarea {
+  width: 100%;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+  transition: border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-base) var(--ease-out);
+}
+
+[data-template="midnight"] .contact-form input:focus,
+[data-template="midnight"] .contact-form textarea:focus,
+.t-midnight .contact-form input:focus,
+.t-midnight .contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-accent-1);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--color-accent-1) 40%, transparent);
+}
+
+/* ---------- Footer ---------- */
+[data-template="midnight"] .site-footer,
+.t-midnight .site-footer {
+  background: var(--color-bg-primary);
+  border-top: 1px solid color-mix(in srgb, var(--color-accent-1) 22%, transparent);
+  color: var(--color-text-secondary);
+  padding: var(--space-2xl) 0 var(--space-xl);
+}
+
+@media (max-width: 900px) {
+  [data-template="midnight"] .about__grid,
+  [data-template="midnight"] .contact__grid,
+  [data-template="midnight"] .pa-grid,
+  [data-template="midnight"] .attorney-grid,
+  [data-template="midnight"] .stats__grid,
+  [data-template="midnight"] .testimonial-grid,
+  [data-template="midnight"] .grid-2,
+  [data-template="midnight"] .grid-3,
+  [data-template="midnight"] .grid-4,
+  .t-midnight .about__grid,
+  .t-midnight .contact__grid,
+  .t-midnight .pa-grid,
+  .t-midnight .attorney-grid,
+  .t-midnight .stats__grid,
+  .t-midnight .testimonial-grid,
+  .t-midnight .grid-2,
+  .t-midnight .grid-3,
+  .t-midnight .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}

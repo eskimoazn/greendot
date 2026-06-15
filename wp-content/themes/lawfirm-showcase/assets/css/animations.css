@@ -1,0 +1,111 @@
+/* ==========================================================================
+   animations.css — CSS Keyframes & Scroll-Reveal System
+   GPU-composited (transform + opacity only). Respects prefers-reduced-motion.
+   ========================================================================== */
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fade-left {
+  from { opacity: 0; transform: translateX(28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fade-right {
+  from { opacity: 0; transform: translateX(-28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes scale-up {
+  from { opacity: 0; transform: scale(0.93); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes clip-reveal {
+  from { clip-path: inset(0 100% 0 0); opacity: 1; }
+  to   { clip-path: inset(0 0% 0 0);   opacity: 1; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.8; }
+  50%       { transform: translateY(8px); opacity: 0.3; }
+}
+@keyframes shimmer {
+  from { background-position: -200% center; }
+  to   { background-position: 200% center; }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* --------------------------------------------------------------------------
+   Scroll-triggered reveal
+   JS adds .is-visible when element enters viewport (IntersectionObserver)
+   -------------------------------------------------------------------------- */
+[data-animate] {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+[data-animate="fade-up"].is-visible {
+  animation: fade-up var(--duration-slow) var(--ease-out-expo) both;
+  animation-delay: var(--stagger-delay, 0ms);
+}
+[data-animate="fade-in"].is-visible {
+  animation: fade-in var(--duration-slow) var(--ease-out) both;
+  animation-delay: var(--stagger-delay, 0ms);
+}
+[data-animate="fade-left"].is-visible {
+  animation: fade-left var(--duration-slow) var(--ease-out-expo) both;
+  animation-delay: var(--stagger-delay, 0ms);
+}
+[data-animate="fade-right"].is-visible {
+  animation: fade-right var(--duration-slow) var(--ease-out-expo) both;
+  animation-delay: var(--stagger-delay, 0ms);
+}
+[data-animate="scale-up"].is-visible {
+  animation: scale-up var(--duration-slow) var(--ease-out-back) both;
+  animation-delay: var(--stagger-delay, 0ms);
+}
+[data-animate="clip-reveal"].is-visible {
+  animation: clip-reveal 0.9s var(--ease-out-expo) both;
+  animation-delay: var(--stagger-delay, 0ms);
+}
+
+/* Hero entrance sequence — applies without .is-visible (fires on page load) */
+.hero__eyebrow { animation: fade-up var(--duration-slow) var(--ease-out-expo) 200ms both; }
+.hero__heading { animation: fade-up var(--duration-slow) var(--ease-out-expo) 350ms both; }
+.hero__sub     { animation: fade-up var(--duration-slow) var(--ease-out-expo) 500ms both; }
+.hero__cta     { animation: fade-up var(--duration-slow) var(--ease-out-expo) 650ms both; }
+
+/* Scroll indicator loop */
+.hero__scroll-indicator {
+  animation: scroll-bounce 1.6s var(--ease-in-out) infinite;
+}
+
+/* Floating decoration */
+.float {
+  animation: float 4s var(--ease-in-out) infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Reduced motion — disable everything
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-animate] { opacity: 1; transform: none; }
+  .hero__eyebrow,
+  .hero__heading,
+  .hero__sub,
+  .hero__cta { animation: none; opacity: 1; }
+}
